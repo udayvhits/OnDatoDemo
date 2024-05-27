@@ -48,10 +48,6 @@ android {
 
             resolutionStrategy {
                 force("org.web3j:abi:5.0.0")
-                /* force("io.insert-koin:koin-core:3.2.0")
-                 force("io.insert-koin:koin-android:3.2.0")
-                 force("io.insert-koin:koin-android-compat:3.2.0")
-                 force("org.jetbrains.kotlin:kotlin-reflect:1.8.0")*/
             }
         }
     }
@@ -137,9 +133,6 @@ android {
         //biometric login
         implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
 
-
-
-
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
         implementation("androidx.activity:activity-ktx:1.4.0")
         implementation("com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava")
@@ -200,18 +193,9 @@ android {
         implementation(platform("com.walletconnect:android-bom:1.31.3")) {
 
         }
-        implementation("com.walletconnect:android-core") {
-            exclude(group = "org.web3j", module = "abi")
-            //  exclude(group = "io.insert-koin")
-        }
-        implementation("com.walletconnect:web3wallet") {
-            exclude(group = "org.web3j", module = "abi")
-            //  exclude(group = "io.insert-koin")
-        }
-        implementation("com.walletconnect:notify") {
-            exclude(group = "org.web3j", module = "abi")
-            //  exclude(group = "io.insert-koin")
-        }
+        implementation("com.walletconnect:android-core")
+        implementation("com.walletconnect:web3wallet")
+        implementation("com.walletconnect:notify")
 
         // Ensure the specific version you want is included
         implementation("org.web3j:abi:5.0.0")
